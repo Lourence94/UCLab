@@ -1,0 +1,90 @@
+{{!< default}}
+<section class="home-section home-fade home-full-height bg-dark-60 landing-header" id="home"
+		 style="background-image:url('{{data.topSection.image.url}}');">
+	<div class="titan-caption">
+		<div class="caption-content">
+			<div class="container">
+				<div class="font-alt mb-30 titan-title-size-4">{{__ data.topSection.title}}</div>
+				<div class="font-alt">{{__ data.topSection.subtitle}}</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="main">
+	{{#each data.mapSection.layers}}
+		<section class="module products map-section bg-dark-60 parallax-bg" style="background-image: url('{{image.url}}')">
+			<div class="container">
+				<div class="row landing-image-text">
+					<div class="col-md-8 col-md-offset-2"><img class="img-responsive banner-img"
+															   src="/images/test/landing/banner_img.png"></div>
+					<div class="col-sm-8">
+						<h2 class="font-alt">{{title}}</h2>
+						<p>{{{subtitle}}}</p><a class="btn btn-border-d btn-circle btn-white" href="#">Все
+						продукты</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{/each}}
+	<section class="module pb-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="module-title font-alt align-left">Наши сервисы</h2>
+					<p class="module-subtitle font-serif align-left"></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="services">
+						<a class="service-link" id="service-link-1" href=""><span>Сервис 1</span></a>
+						<a class="service-link" id="service-link-2" href=""><span>Сервис 2</span></a>
+						<a class="service-link" id="service-link-3" href=""><span>Сервис 3</span></a>
+						<a class="service-link" id="service-link-4" href=""><span>Сервис 4</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="module landing-reason parallax-bg product-section pb-0" style="background-image: url('/images/background/mainPageServices.jpg')">
+		<div class="container">
+			<div class="row landing-image-text">
+				<div class="col-sm-8">
+					<h2 class="font-alt">Рандомный продукт</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><a
+						class="btn btn-border-d btn-circle btn-white" href="#">Все продукты</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="module">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<h2 class="module-title font-alt">Блог</h2>
+					<div class="module-subtitle font-serif">Тут будут выводиться последние новости проекта.</div>
+				</div>
+			</div>
+			<div class="row multi-columns-row post-columns">
+				{{#each data.posts}}
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="post">
+							<div class="post-thumbnail" style="background-image: url('{{{image.url}}}')"></div>
+							<div class="post-header font-alt">
+								<h4 class="post-title"><a href="{{{postUrl slug}}}">{{{title}}}</a></h4>
+								<div class="post-meta"> {{date publishedDate}}</div>
+							</div>
+							<div class="post-brief">
+								{{{content.brief}}}
+							</div>
+							<div class="post-more"><a class="more-link" href="{{postUrl slug}}">{{{__ "Read more"}}}</a></div>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</section>
+	{{>extendedFooter}}

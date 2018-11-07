@@ -1,0 +1,102 @@
+<div id="calc" class="main tabcontent" style="display: block;">
+	<section id="calc-module" class="module">
+		<div>
+			<div class="cat-tab">
+				{{#each data.methods}}
+					<button class="tablinks3">{{@key}}</button>
+				{{/each}}
+			</div>
+
+			<div class="container pre-calc-container">
+				{{#each data.methods}}
+					<div id="{{@key}}" class="tabcontent3 calc-entry" style="display: none;">
+						<div class="objects-container">
+							<div class="calc-single">
+								<h2>{{@key}}</h2>
+								<p>{{this}}</p>
+								<div id="offer-gparhics">
+
+								</div>
+								<h2>Аналоги</h2>
+								<div class="offers-multi">
+
+									<div class="offer">
+										<div class="offer-pic">
+											<img src="/assets/images/home.jpg">
+										</div>
+										<div class="offer-details">
+											<div class="offer-details-container">
+												<p>Текст</p>
+												<p>Текст</p>
+												<p>Текст</p>
+											</div>
+											<div class="offer-price">
+												<h4>2.000.000 Р</h4>
+											</div>
+										</div>
+									</div>
+
+									<div class="offer">
+										<div class="offer-pic">
+											<img src="/assets/images/home.jpg">
+										</div>
+										<div class="offer-details">
+											<div class="offer-details-container">
+												<p>Текст</p>
+												<p>Текст</p>
+												<p>Текст</p>
+											</div>
+											<div class="offer-price">
+												<h4>2.000.000 Р</h4>
+											</div>
+										</div>
+									</div>
+
+									<div class="offer">
+										<div class="offer-pic">
+											<img src="/assets/images/home.jpg">
+										</div>
+										<div class="offer-details">
+											<div class="offer-details-container">
+												<p>Текст</p>
+												<p>Текст</p>
+												<p>Текст</p>
+											</div>
+											<div class="offer-price">
+												<h4>2.000.000 Р</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+				
+				<div class="params">
+					<div class="some-filter">
+						<h5>Фильтр</h5>
+						<div class="half-field"><input type="text" name=""><input type="text" name=""></div>
+						<small>Описание фильтра</small>
+					</div>
+					<div class="some-filter">
+						<h5>Фильтр 2</h5>
+						<input type="text" name="">
+						<small>Описание второго фильтра</small>
+					</div>
+					<div class="some-filter">
+						<h5>Фильтр с селектом</h5>
+						<select>
+							<option>1</option>
+							<option>Два</option>
+						</select>
+						<small>Описание третьего фильтра</small>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+</div>
+{{>extendedFooter}}

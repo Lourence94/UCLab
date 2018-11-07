@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Name</title>
+
+	<meta name="theme-color" content="#ffffff">
+
+	<link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/animate.css/animate.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+	<link href="//project.fcknawsm.ru/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="//project.fcknawsm.ru/assets/css/style.css" rel="stylesheet">
+	<link id="color-scheme" href="//project.fcknawsm.ru/assets/css/colors/default.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+<main>
+	<div class="page-loader">
+		<div class="loader">Loading...</div>
+	</div>
+	<nav class="navbar navbar-custom navbar-fixed-top navbar-transparent map-nav" role="navigation">
+		<div class="container container-wide">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index">Name</a>
+				<!-- <input id="map-search" type="text" name="map-search"><label for="map-search">&nbsp;</label> -->
+				<input type="email" placeholder="Поиск" id="map-search" required><label for="map-search">&nbsp;</label>
+			</div>
+			<div class="collapse navbar-collapse" id="custom-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Service 1</a></li>
+							<li><a href="#">Service 2</a></li>
+							<li><a href="#">Service 3</a></li>
+						</ul>
+
+					</div>
+					<button class="btn btn-primary btn-menu" type="button">*Login*</button>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="main login-container">
+		<section id="map-module" class="module">
+			<div class="container-map">
+				<div id="map-wrap">
+					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=43.5992431640625%2C48.23382085308753%2C45.41198730468751%2C49.06756814081644&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+				</div>
+
+				<div id="map-sidebar-container">
+					<div id="map-sidebar-right">
+						123
+					</div>
+					<div id="map-presidebar-right" onclick="openSidebar();">
+						<span>открыть</span>
+					</div>
+
+				</div>
+			</div>
+
+	</div>
+
+	</section>
+	<footer class="footer footer-fixed footer-map">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="copyright font-alt">&copy; 2017&nbsp;<a href="index">Name</a>, All Rights Reserved</p>
+				</div>
+				<div class="col-sm-6">
+					<div class="footer-social-links"><a href="">Contact</a><a href="privacy">Privacy</a><a href="terms">Terms</a><a href="http://project.fcknawsm.ru/about">About</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+
+</main>
+<!--  
+JavaScripts
+=============================================
+-->
+<script type="text/javascript">
+	function openSidebar() {
+		var sidebarRight = document.getElementById('map-sidebar-right').style;
+
+		if (sidebarRight.display == "none") {
+			sidebarRight.display = "block";
+		} else {
+			sidebarRight.display = "none";
+		}
+
+	}
+
+	if (window.location.hash == "#signup") {
+		document.getElementById("service1").href='http://project.fcknawsm.ru/signup?type=service1';
+		document.getElementById("service2").href='http://project.fcknawsm.ru/signup?type=service2';
+		document.getElementById("service3").href='http://project.fcknawsm.ru/signup?type=service3';
+	}
+</script>
+<script src="assets/lib/jquery/dist/jquery.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/lib/wow/dist/wow.js"></script>
+<script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+<script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+<script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="assets/lib/flexslider/jquery.flexslider.js"></script>
+<script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="assets/lib/smoothscroll.js"></script>
+<script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

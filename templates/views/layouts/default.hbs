@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>UCLab</title>
+
+	<meta name="theme-color" content="#ffffff">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="/lib/animate.css/animate.css" rel="stylesheet">
+	<link href="/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/lib/et-line-font/et-line-font.css" rel="stylesheet">
+	<link href="/lib/flexslider/flexslider.css" rel="stylesheet">
+	<link href="/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+	<link href="/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+	<link href="/lib/leaflet/leaflet.css" rel="stylesheet">
+	<link href="/styles/site.min.css" rel="stylesheet">
+
+	{{!-- This file provides the default styling for the KeystoneJS Content Editor
+        - only renders when user is logged in and admin--}}
+	{{{isAdminEditorCSS user}}}
+
+	{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    //- Safely remove this block if you are not targeting IE8 --}}
+	<!--[if lt IE 9]>
+	<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+	<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+<div class="page-loader">
+	<div class="loader"></div>
+</div>
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">UCLab</a>
+		</div>
+		<div class="collapse navbar-collapse" id="custom-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				{{# each navLinks}}
+					<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+						<a class="section-scroll" href="{{ href }}">{{{__  label}}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="body">
+	<!--
+        Flash messages allow you to display once-off status messages to users, e.g. form
+        validation errors, success messages, etc
+    -->
+	{{#if messages}}
+		<div id="flash-messages" class="container">
+			{{#if messages.info}}
+				<div class="alert alert-info">
+					{{{flashMessages messages.info}}}
+				</div>
+			{{/if}}
+			{{#if messages.success}}
+				<div class="alert alert-success">
+					{{{flashMessages messages.success}}}
+				</div>
+			{{/if}}
+			{{#if messages.warning}}
+				<div class="alert alert-warning">
+					{{{flashMessages messages.warning}}}
+				</div>
+			{{/if}}
+			{{#if messages.error}}
+				<div class="alert alert-danger">
+					{{{flashMessages messages.error}}}
+				</div>
+			{{/if}}
+		</div>
+	{{/if}}
+	<!-- The content block should contain the body of your template's content-->
+	{{{body}}}
+</div>
+{{>footer}}
+<div class="scroll-up">
+	<a href="#totop">
+		<i class="fa fa-angle-double-up"></i>
+	</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+<script src="/lib/flexslider/jquery.flexslider.js"></script>
+<script src="/scripts/{{pageScript section}}"></script>
+{{{isAdminEditorJS user}}}
+</body>
+</html>

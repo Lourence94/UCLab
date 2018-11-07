@@ -1,0 +1,175 @@
+<div class="main">
+	<section class="module bg-dark-60 service-page-header" style="background-image: url('{{data.post.image.url}}');">
+		<div class="container blog-thumb">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<h2 class="module-title font-alt blog-title">{{data.post.title}}</h2>
+					<div class="blog-tags">
+						{{#each data.post.categories}}
+							<a href="" class="blog-tag">{{name}}</a>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="blog-author">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 ">
+					<h3>Authors:</h3>
+					<p>
+						{{#each data.post.authors}}
+							{{#if person}}
+								<strong>{{person.name.full}}, {{person.position}}</strong> – {{person.team}}
+								<br>
+							{{else}}
+								<strong>{{name.full}}</strong>
+								<br>
+							{{/if}}
+						{{/each}}
+					</p>
+					<div class="tooltip2"><p>Hover over me, sempai</p><span class="tooltiptext2">О! Привет! А я тебя знаю!</span>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<h3>Downloads:</h3>
+					<div class="blog-files">
+						<a href="{{data.post.document.url}}"><span class="blog-file"><span aria-hidden="true"
+																						   class="icon-download"></span>Download the article</span></a>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<h3>Citation:</h3>
+					<p>{{data.post.citation}}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="module-small module-blog-post">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="post">
+						<div class="post-header font-alt">
+							<div class="post-meta">
+								{{date data.post.publishedDate format='Do, MMMM YYYY'}} | 0 Comments
+							</div>
+						</div>
+						<div class="post-brief">
+							{{{data.post.content.brief}}}
+						</div>
+						<div class="post-tags">
+							Keywords:
+							{{{tagsList data.post.tags}}}
+						</div>
+						<div class="post-entry">
+							{{{data.post.content.extended}}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="module-small bg-dark-60 parallax-bg blog-helper"
+			 style="background-image: url('/images/test/finance/finance_funfact_bg.jpg');">
+		<div class="container">
+			<div class="row multi-columns-row">
+				<div class="col-sm-12 col-md-8 col-lg-8">
+					<div class="count-item mb-sm-40">
+						<h3 class="count-title font-serif">RECOMMENDED READING:</h3>
+						<ul class="blog-recommendations">
+							<li>123</li>
+							<li>123</li>
+							<li>123</li>
+							<li>123</li>
+							<li>123</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4 col-lg-4">
+					<div class="count-item mb-sm-40">
+						<h3 class="count-title font-serif">SHARE THE ARTICLE:</h3>
+						<p>Тут будут кнопочки нужных соц сетей</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="module-small module-blog-comment">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="comments">
+						<h4 class="comment-title font-alt">There are 3 comments</h4>
+						<div class="comment clearfix">
+							<div class="comment-avatar"><img
+									src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg"
+									alt="avatar"/></div>
+							<div class="comment-content clearfix">
+								<div class="comment-author font-alt"><a href="#">John Doe</a></div>
+								<div class="comment-body">
+									<p>The European languages are members of the same family. Their separate
+										existence is a myth. For science, music, sport, etc, Europe uses the same
+										vocabulary. The European languages are members of the same family. Their
+										separate existence is a myth.</p>
+								</div>
+								<div class="comment-meta font-alt">Today, 14:55 - <a href="#">Reply</a>
+								</div>
+							</div>
+							<div class="comment clearfix">
+								<div class="comment-avatar"><img
+										src="https://s3.amazonaws.com/uifaces/faces/twitter/draganbabic/128.jpg"
+										alt="avatar"/></div>
+								<div class="comment-content clearfix">
+									<div class="comment-author font-alt"><a href="#">Mark Stone</a></div>
+									<div class="comment-body">
+										<p>Europe uses the same vocabulary. The European languages are members of
+											the same family. Their separate existence is a myth.</p>
+									</div>
+									<div class="comment-meta font-alt">Today, 15:34 - <a href="#">Reply</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="comment clearfix">
+							<div class="comment-avatar"><img
+									src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg"
+									alt="avatar"/></div>
+							<div class="comment-content clearfix">
+								<div class="comment-author font-alt"><a href="#">Andy</a></div>
+								<div class="comment-body">
+									<p>The European languages are members of the same family. Their separate
+										existence is a myth. For science, music, sport, etc, Europe uses the same
+										vocabulary. The European languages are members of the same family. Their
+										separate existence is a myth.</p>
+								</div>
+								<div class="comment-meta font-alt">Today, 14:59 - <a href="#">Reply</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="comment-form">
+						<h4 class="comment-form-title font-alt">Add your comment</h4>
+						<form method="post">
+							<div class="form-group">
+								<label class="sr-only" for="name">Name</label>
+								<input class="form-control" id="name" type="text" name="name" placeholder="Name"/>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="email">Name</label>
+								<input class="form-control" id="email" type="text" name="email"
+									   placeholder="E-mail"/>
+							</div>
+							<div class="form-group">
+									<textarea class="form-control" id="comment" name="comment" rows="4"
+											  placeholder="Comment"></textarea>
+							</div>
+							<button class="btn btn-round btn-d" type="submit">Post comment</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{{>extendedFooter}}

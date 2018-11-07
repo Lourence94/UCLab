@@ -1,0 +1,70 @@
+<section class="home-section home-parallax home-fade blog-header" id="home">
+	<div class="hero-slider">
+		<ul class="slides">
+			<li class="bg-dark-30 bg-dark" style="background-image:url(/images/test/section-8.jpg);">
+				<div class="titan-caption">
+					<div class="caption-content">
+						<div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
+						<div class="font-alt mb-40 titan-title-size-4">Title 1</div>
+						<a class="section-scroll btn btn-border-w btn-round" href="#about">Learn More</a>
+					</div>
+				</div>
+			</li>
+			<li class="bg-dark-30 bg-dark" style="background-image:url(/images/test/section-10.jpg);">
+				<div class="titan-caption">
+					<div class="caption-content">
+						<div class="font-alt mb-30 titan-title-size-1">pretitle</div>
+						<div class="font-alt mb-40 titan-title-size-3">Title 2</div>
+						<a class="section-scroll btn btn-border-w btn-round" href="#about">Knopochka</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<div class="main">
+	<section class="module-blog">
+		<div class="container">
+			<div class="row multi-columns-row post-columns">
+				<div class="col-sm-12 col-md-12 col-lg-12 blog-prefilters">
+					<div class="blog-filters">
+						<span class="under-filter active-filter">{{__ "All categories"}}</span>
+						{{#each data.categories}}
+							<span class="under-filter">{{name}}</span>
+						{{/each}}
+					</div>
+				</div>
+				{{#each data.posts.results}}
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="post">
+							<a href="{{postUrl slug}}">
+								<div class="post-thumbnail" style="background-image: url('{{{image.url}}}')">
+								</div>
+							</a>
+							<div class="post-header font-alt">
+								<h4 class="post-title"><a href="{{postUrl slug}}">{{title}}</a></h4>
+								<div class="post-meta">{{date publishedDate}} | 3 Comments
+								</div>
+							</div>
+							<div class="post-brief">
+								{{{content.brief}}}
+							</div>
+							<div class="post-more"><a class="more-link" href="{{postUrl slug}}">{{{__ "Read more"}}}</a></div>
+						</div>
+					</div>
+				{{/each}}
+
+			</div>
+			{{>pagination}}
+		</div>
+		<div class="container">
+			<div class="btags-wrap">
+				<ul class="btags">
+					{{#each data.tags}}
+						<li>{{value}}</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</section>
+	<hr class="divider-d">

@@ -1,0 +1,70 @@
+<div class="main">
+	<section class="module bg-dark-60 portfolio-page-header" data-background="/images/test/portfolio/portfolio_header_bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<h2 class="module-title font-alt">Personality</h2>
+					<div class="module-subtitle font-serif">Тут будет красивый кастомный бэкграунд</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{{#data.person}}
+	<section class="module">
+		<div class="container">
+			<div class="row multi-columns-row">
+				<h1 class="font-serif personality-name">{{name.full}}</h1>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<p><img src="{{cloudinaryUrl photo}}"></p>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<div class="work-details">
+						<h5 class="work-details-title font-alt">Details</h5>
+						<p></p>
+						<ul class="personality-details">
+							<li><strong>Team: </strong><span class="font-serif personality-detail"><a href="">{{team}}</a></span></li>
+							<li><strong>Position: </strong><span class="font-serif personality-detail">{{position}}</span></li>
+							<li><strong>Smth else: </strong><span class="font-serif personality-detail">wow</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<h5 class="work-details-title font-alt">About</h5>
+					{{{about}}}
+				</div>
+			</div>
+	</section>
+	{{/data.person}}
+	<hr class="divider-w">
+	<section class="module">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<h2 class="module-title font-alt">Projects</h2>
+				</div>
+			</div>
+			<ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
+				<li class="work-item illustration webdesign"><a href="portfolio_single_featured_slider1.html">
+					<div class="work-image"><img src="/images/test/portfolio/grid-portfolio1.jpg" alt="Portfolio Item"/></div>
+					<div class="work-caption font-alt">
+						<h3 class="work-title">Corporate Identity</h3>
+						<div class="work-descr">Illustration</div>
+					</div></a></li>
+				<li class="work-item marketing webdesign"><a href="portfolio_single_featured_video2.html">
+					<div class="work-image"><img src="/images/test/portfolio/grid-portfolio6.jpg" alt="Portfolio Item"/></div>
+					<div class="work-caption font-alt">
+						<h3 class="work-title">Paper clip</h3>
+						<div class="work-descr">Marketing</div>
+					</div></a></li>
+				<li class="work-item illustration webdesign"><a href="portfolio_single_featured_image2.html">
+					<div class="work-image"><img src="/images/test/portfolio/grid-portfolio8.jpg" alt="Portfolio Item"/></div>
+					<div class="work-caption font-alt">
+						<h3 class="work-title">Branding</h3>
+						<div class="work-descr">Illustration</div>
+					</div></a></li>
+			</ul>
+		</div>
+	</section>
+	{{>bottomInfoPanel}}
+	<hr class="divider-d"/>
+</div>
